@@ -6,3 +6,12 @@ eureka:
       defaultZone: http://localhost:8084/eureka/
   instance:
     hostname: localhost
+    
+zuul:
+  routes:
+    producer:
+     service-id: user-producer
+    consumer:
+     service-id: user-client
+    hystrix:
+     service-id: user-hystrix
